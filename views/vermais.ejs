@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="imagem/png" href="./img/pokerbola.png" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style2.css">
+    
+    <title>Pokedex</title>
+</head>
+<body>
+    
+    <section class="main_page">
+       
+        <div class="navbar">
+        
+            <ul>
+                <div class="logo_brand">
+                    <li><a href="#home"><img src="./img/pokerball.png" class="pokerbola_img"></a></li>
+                    <li class="text"><a href="#news">POKEDEX</a></li>
+                </div>
+                
+                <li class="text right"><a href="#contact">CONTATO</a></li>
+                <li class="text right"><a href="#about">SOBRE</a></li>
+                <li class="text right active"><a href="#home">HOME</a></li>
+            </ul>
+
+        </div>
+
+        <div class="band">
+            
+            <% pokedex.forEach(element => { %>
+        
+                <a href="/detalhes/<%=element.id  %> ">
+                     <div class="card">
+                     
+                        <div class="img_pokemon">
+                            <img src="<%= element.img %>" class="img_setup">
+                        </div>
+            
+                        <article>
+                          <h1>#<%= element.id %></h1>
+                          <span><%= element.name %></span>
+                          <div class="line"></div>
+            
+                         
+                          <div class="circle tipo">
+                              <div class="circle_text">Altura : <%= element.height %></div>
+                          </div>
+                          <div class="circle tipo">
+                              <div class="circle_text">Peso : <%= element.weight %></div>
+                          </div>
+                          <div class="circle tipo">
+                              <div class="circle_text"><%= element.type %></div>
+                          </div>
+            
+                          
+            
+                        </article>
+                      
+                    </div>
+                </a>
+               
+                <%  }) %>
+
+
+            </div>
+
+        
+
+
+
+    </section>
+
+    <!– ---------- JAVASCRIPT ------------ –>
+
+    <script src="./script.js"></script>
+</body>
+</html>
