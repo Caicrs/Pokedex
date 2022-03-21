@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="imagem/png" href="/img/pokerball.png" />
+    <link rel="stylesheet" href="/detalhes.css"  type="text/css">
+    
+    <title>Pokedex</title>
+</head>
+<body>
+    
+    <section class="main_page">
+       
+        <div class="navbar">
+        
+            <ul>
+                <div class="logo_brand">
+                    <li><a href="/"><img src="/img/pokerball.png" class="pokerbola_img"></a></li>
+                    <li class="text"><a href="/">POKEDEX</a></li>
+                </div>
+
+                <li class="text right"><a href="/contact">CONTATO</a></li>
+                <li class="text right"><a href="/about">SOBRE</a></li>
+                <li class="text right active"><a href="/about">HOME</a></li>
+            </ul>
+
+        </div>
+
+        
+
+        
+            
+         
+
+
+        <div class="band">
+
+            
+            
+            <% pokemonAtual.forEach(element => { %>
+                
+                <div class="img_pokemon">
+                    <img src="<%= element.img %>" class="img_setup">
+                </div>
+                    <div class="card">
+                    
+                    
+            
+                        <article>
+                        
+                        <span><%= element.name %></span>
+                        <div class="line"></div>
+            
+                        
+                        
+                            <div class="circle_text">ID|Num : <br> <strong><%= element.id %></strong></div>
+                            
+                            <div class="circle_text">Altura : <br> <strong><%= element.height %></strong></div>
+                        
+                    
+                            <div class="circle_text">Peso : <br> <strong><%= element.weight %></strong></div>
+                        
+                        
+                            <div class="circle_text">Tipo : <br> <strong><%= element.type %></strong></div>
+                            
+                            <div class="circle_text">Candy : <br> <strong><%= element.candy %></strong></div>
+                            
+                    
+                                <% let result = element.weaknesses %>
+                            <div class="circle_text">Fraquezas : <br> <strong><%=result.join(" | ",",")%></strong></div>
+
+                            
+                            
+                        
+            
+                        </article>
+                    
+                    </div>
+                    
+            
+            
+            <%  }) %>
+
+            
+            
+        </div>
+
+
+
+        
+
+
+
+    </section>
+
+    <footer>
+        <div class="copyright" >
+            <script>
+              document.write('&copy;' );
+              document.write(new Date().getFullYear());
+              document.write(' Caic Rocha - All Rights Reserved.');
+              
+            </script>
+          </div>
+          
+    </footer>
+
+    <!– ---------- JAVASCRIPT ------------ –>
+
+    <script src="./script.js"></script>
+</body>
+</html>

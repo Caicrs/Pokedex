@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="imagem/png" href="./img/pokerball.png" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style2.css">
+    <title>Pokedex</title>
+</head>
+<body>
+    
+    <section class="main_page">
+       
+        <div class="navbar">
+        
+            <ul>
+                <div class="logo_brand">
+                    <li><a href="#home"><img src="./img/pokerball.png" class="pokerbola_img"></a></li>
+                    <li class="text"><a href="#news">POKEDEX</a></li>
+                </div>
+
+                <li class="text right"><a href="#contact">CONTATO</a></li>
+                <li class="text right"><a href="#about">SOBRE</a></li>
+                <li class="text right active"><a href="#home">HOME</a></li>
+            </ul>
+
+        </div>
+
+        <div class="session_01">
+            
+            <div class="title_box">
+                <div class="left_line"></div>
+                
+                <div class="contents">
+                    <div class="title">O MUNDO POKEMON<br>VISTO POR UM NOVO ANGULO.</div>
+                    <div class="title reverse">NOMEKOP ODNUM O<br>.OLUGNA OVON MU ROP OTSIV</div>
+                </div>
+
+            </div>
+
+            <div class="scroll_down">
+                <div class="scroll">
+                    <img src="./img/arrow_down.png" class="arrow_down" />
+                    <div class="text arrow">SCROLL DOWN</div>
+                    <img src="./img/arrow_down.png" class="arrow_down" />
+                
+                </div>
+            </div>
+
+        </div>
+
+        <div class="session_02">
+            
+         
+
+            <div class="support-grid">Top Pokemons</div>
+
+<div class="band">
+
+    
+      
+    <% trendpokemons.forEach(element => { %>
+        
+        <a href="/detalhes/<%= element.id %> ">
+            <div class="card">
+             
+                <div class="img_pokemon">
+                    <img src="<%= element.img %>" class="img_setup">
+                </div>
+    
+                <article>
+                  <h1>#<%= element.id %></h1>
+                  <span><%= element.name %></span>
+                  <div class="line"></div>
+    
+                 
+                  <div class="circle tipo">
+                      <div class="circle_text">Altura : <%= element.height %></div>
+                  </div>
+                  <div class="circle tipo">
+                      <div class="circle_text">Peso : <%= element.weight %></div>
+                  </div>
+                  <div class="circle tipo">
+                      <div class="circle_text"><%= element.type %></div>
+                  </div>
+    
+                  
+    
+                </article>
+             
+            </div>
+        </a>
+       
+       
+        <%  }) %>
+
+    
+    
+  </div>
+
+  <div class="vermais_box">
+            <div class="vermais"><a href="/vermais">Ver Mais</a></div>
+    </div>
+
+
+           <footer>
+               Created by Caic Rocha Sales
+           </footer>
+
+
+
+    </section>
+
+    <!– ---------- JAVASCRIPT ------------ –>
+
+    <script src="./script.js"></script>
+</body>
+</html>
